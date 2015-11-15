@@ -48,7 +48,10 @@ WalmartTestTask::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  resources :parsers do
+    get :parse_walmart, on: :collection
+  end
+  root :to => 'parsers#index'
 
   # See how all your routes lay out with "rake routes"
 

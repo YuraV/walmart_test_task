@@ -1,0 +1,15 @@
+%h2= "Parser"
+%div
+  = label_tag('product_id')
+  = text_field_tag('product_id')
+%div
+  = label_tag('search_query')
+  = text_field_tag('search_query')
+= submit_tag('send')
+
+#response
+
+:javascript
+  $(function(){
+    new window.Parser({ url: "#{parse_walmart_parsers_path}"})
+  })

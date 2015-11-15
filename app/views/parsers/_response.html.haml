@@ -1,0 +1,6 @@
+%div
+  = t('.found')
+  = result.size
+%ul
+  - result.each do |r|
+    %li= "review -> #{r}"
